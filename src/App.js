@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from "react-router-dom";
-import Home from './components/Home';
+import Exercise from './components/Exercise';
 import About from './components/About';
 import Topics from './components/Topics';
 
@@ -13,21 +12,7 @@ class BasicExample extends Component {
     return (
       <Router>
         <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/topics">Topics</Link>
-            </li>
-          </ul>
-
-          <hr />
-
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Exercise} />
           <Route path="/about" component={About} />
           <Route path="/topics" component={Topics} />
         </div>
